@@ -7,15 +7,27 @@
 #include <vector>
 using namespace std;
 using array3d = vector<vector<vector<double>>>;
+#include <random>
+#include <cmath>
 
 class Simulator {
 private:
     array3d price;
-    double S, K, q, T, sigma, Rep, Sim, TradeDays;
+    double S, K, q, r, T, sigma, Rep, Sim, TradeDays;
+
+    // Normal RV
+    double getNormal();
+
+    // calculate price and put in array3d price
+    void calc();
+
 
 public:
-    Simulator(double S, double K, double q, double T, double sigma, double Rep, double Sim, double TradeDays);
+    // Constructor
+    Simulator(double S, double K, double r, double q, double T, double sigma, double Rep, double Sim, double TradeDays);
 
+
+    // getter
     const array3d &getPrice() const;
 
     double getS() const;
