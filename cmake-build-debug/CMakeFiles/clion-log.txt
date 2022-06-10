@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -G "CodeBlocks - Unix Makefiles" /Users/lindazhong/Fin-algorithm
+"C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2021.3.3/bin/ninja/win/ninja.exe" -G Ninja "C:\Users\Andy Chen\C++\CLion\Fin_algorithm_MC"
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/lindazhong/Fin-algorithm/cmake-build-debug
+-- Build files have been written to: C:/Users/Andy Chen/C++/CLion/Fin_algorithm_MC/cmake-build-debug
