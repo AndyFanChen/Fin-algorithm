@@ -68,9 +68,13 @@ void Simulator::calc() {
         for (int sim = 0; sim < Sim; sim++){
             price.at(rep).push_back(vector<double>());
 
-            for (int tradedays = 0; tradedays < TradeDays; tradedays++){
-                double onePirce = exp(log(S) + (r - q - pow(sigma, 2) / 2) * T + getNormal() * sigma * sqrt(T));
+            for (int tradedays = 0; tradedays < (int)(TradeDays / 2); tradedays++){
+                double RV = getNormal();
+                double onePirce = exp(log(S) + (r - q - pow(sigma, 2) / 2) * T + RV * sigma * sqrt(T));
                 price.at(rep).at(sim).push_back(onePirce);
+                // Variance Reduction
+                double onePirce2 = exp(log(S) + (r - q - pow(sigma, 2) / 2) * T - RV * sigma * sqrt(T));
+                price.at(rep).at(sim).push_back(onePirce2);
             }
         }
     }
