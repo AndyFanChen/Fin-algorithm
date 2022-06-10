@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Fin_algorithm_MC.dir/build.make CMakeFiles/Fin_algorithm_MC.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Payoff.o: src/Payoff.cpp.o
+.PHONY : src/Payoff.o
+
+# target to build an object file
+src/Payoff.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Fin_algorithm_MC.dir/build.make CMakeFiles/Fin_algorithm_MC.dir/src/Payoff.cpp.o
+.PHONY : src/Payoff.cpp.o
+
+src/Payoff.i: src/Payoff.cpp.i
+.PHONY : src/Payoff.i
+
+# target to preprocess a source file
+src/Payoff.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Fin_algorithm_MC.dir/build.make CMakeFiles/Fin_algorithm_MC.dir/src/Payoff.cpp.i
+.PHONY : src/Payoff.cpp.i
+
+src/Payoff.s: src/Payoff.cpp.s
+.PHONY : src/Payoff.s
+
+# target to generate assembly for a file
+src/Payoff.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Fin_algorithm_MC.dir/build.make CMakeFiles/Fin_algorithm_MC.dir/src/Payoff.cpp.s
+.PHONY : src/Payoff.cpp.s
+
 src/Simulator.o: src/Simulator.cpp.o
 .PHONY : src/Simulator.o
 
@@ -189,6 +213,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/Payoff.o"
+	@echo "... src/Payoff.i"
+	@echo "... src/Payoff.s"
 	@echo "... src/Simulator.o"
 	@echo "... src/Simulator.i"
 	@echo "... src/Simulator.s"
