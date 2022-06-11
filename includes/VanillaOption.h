@@ -21,8 +21,8 @@ public:
     virtual ~VanillaOption();
 
 public:
-//    void basic();
     virtual void calc() override;
+    virtual void deletePrice();
 
 
 
