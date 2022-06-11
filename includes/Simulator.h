@@ -25,7 +25,7 @@ private:
 
 public:
     // Constructor
-    Simulator(double S, double K, double r, double q, double T, double sigma, double Rep, double Sim, double TradeDays);
+    Simulator(double S, double r, double q, double T, double sigma, double Rep, double Sim, double TradeDays);
 
 
     // getter
