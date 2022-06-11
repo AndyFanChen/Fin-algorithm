@@ -6,7 +6,7 @@
 
 
 Simulator::Simulator(double S, double K, double r,double q, double T, double sigma, double Rep, double Sim, double TradeDays)
-: S(S), K(K), q(q), r(r), T(T), sigma(sigma), Rep(Rep), Sim(Sim), TradeDays(TradeDays){
+: S(S), q(q), r(r), T(T), sigma(sigma), Rep(Rep), Sim(Sim), TradeDays(TradeDays){
     calc();
 }
 
