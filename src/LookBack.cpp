@@ -45,8 +45,8 @@ void LookBack::calc() {
             }
         }
     }
-    // discount, then put into optionValues
 
+    // discount, then put into optionValues
     for (int rep = 0; rep < payoff.size(); rep++){
         double sum = 0;
         for (int sim = 0; sim < payoff.at(rep).size(); sim++){
@@ -54,9 +54,12 @@ void LookBack::calc() {
         }
         double r = simulator->getR();
         int tradedays = simulator->getTradeDays();
+        // discount
         double value = (sum / tradedays) / exp(-r * tradedays);
-    }
 
+        // put into optionValues
+        optionValues.push_back(value);
+    }
 }
 
 void LookBack::deletePrice() {

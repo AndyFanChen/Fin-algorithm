@@ -18,9 +18,6 @@ double Simulator::getS() const {
     return S;
 }
 
-double Simulator::getK() const {
-    return K;
-}
 
 double Simulator::getQ() const {
     return q;
