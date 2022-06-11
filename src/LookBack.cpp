@@ -21,6 +21,7 @@ void LookBack::calc() {
     for (int rep = 0; rep < totalPrice.size(); rep++){
         payoff.push_back(vector<double>());
         for (int sim = 0; sim < totalPrice.at(rep).size(); sim++){
+            // look back call
             if (whichOption == 'C') {
                 // initial Smax as the first number per simulation.
                 double Smax = totalPrice.at(rep).at(sim).at(0);
@@ -34,6 +35,7 @@ void LookBack::calc() {
                 double lastPrice = totalPrice.at(rep).at(sim).at(simulator->getTradeDays() - 1);
                 payoff.at(rep).push_back(Smax - lastPrice);
             }
+            // look back put
             else{
                 // initial Smin as the first number per simulation.
                 double Smin = totalPrice.at(rep).at(sim).at(0);

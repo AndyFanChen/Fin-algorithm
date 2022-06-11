@@ -38,19 +38,22 @@ void Simulator::calc() {
                     double onePirce = exp(log(S) + (r - q - pow(sigma, 2) / 2) * (T / TradeDays) +
                                           RV * sigma * sqrt(T / TradeDays));
                     price.at(rep).at(sim).push_back(onePirce);
+
                     // Variance Reduction
                     double onePirce2 = exp(log(S) + (r - q - pow(sigma, 2) / 2) * (T / TradeDays) -
                                            RV * sigma * sqrt(T / TradeDays));
                     price.at(rep).at(sim).push_back(onePirce2);
                 }
                 else{
-                    double lastPrice =price.at(rep).at(sim).at(tradedays - 1);
-                    double onePirce = exp(log(lastPrice) + (r - q - pow(sigma, 2) / 2) * (T / TradeDays) +
-                                          RV * sigma * sqrt(T / TradeDays));
+                    double prePrice = price.at(rep).at(sim).at(tradedays - 1);
+
+                    double onePirce = exp(log(prePrice) + (r - q - pow(sigma, 2) / 2) * (T / TradeDays)
+                                        + RV * sigma * sqrt(T / TradeDays));
                     price.at(rep).at(sim).push_back(onePirce);
+
                     // Variance Reduction
-                    double onePirce2 = exp(log(lastPrice) + (r - q - pow(sigma, 2) / 2) * (T / TradeDays) -
-                                           RV * sigma * sqrt(T / TradeDays));
+                    double onePirce2 = exp(log(prePrice) + (r - q - pow(sigma, 2) / 2) * (T / TradeDays)
+                                        - RV * sigma * sqrt(T / TradeDays));
                     price.at(rep).at(sim).push_back(onePirce2);
                 }
             }
