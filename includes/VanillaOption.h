@@ -13,7 +13,7 @@ using namespace std;
 class VanillaOption : public Payoff{
 private:
     char whichOption;
-
+    array3d
     double K;
 public:
     VanillaOption(Simulator *simulator, char whichOption);

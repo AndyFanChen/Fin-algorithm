@@ -4,12 +4,11 @@
 
 #include "../includes/Payoff.h"
 
-Payoff::Payoff(Simulator* simulator) : simulator(simulator){}
 
 //void Payoff::getValue() {
 //    simulator->getPrice();
 //}
-
+Payoff::Payoff() {}
 Payoff::~Payoff() {}
 
 
@@ -60,10 +59,9 @@ vector<double> Payoff::getRange() {
 
     return RangeVec;
 }
-//  欠查delete如何使用
-void Payoff::deletePrice() {
-    delete simulator;
-}
+
+
+
 
 
 

@@ -11,8 +11,6 @@ using namespace std;
 
 class Payoff {
 private:
-    Simulator* simulator;
-
     //public:
 //    Payoff(Simulator *simulator, const array3d &totalPrice, vector<double> &optionValues);
 
@@ -22,16 +20,15 @@ private:
 public:
 //  傳基本參數給payoff class
 //  simulator是Simulator*類的東西(class的地址)
-    Payoff(Simulator* simulator);
+    Payoff();
     virtual ~Payoff();
 //  override時要放private
     virtual vector<double>& calc() = 0;
-    void getPrice();
     vector<double>& getValues();
     double getMean();
     double getStd();
     vector<double> getRange();
-    void deletePrice();
+    virtual void deletePrice() = 0;
 
 
 };
