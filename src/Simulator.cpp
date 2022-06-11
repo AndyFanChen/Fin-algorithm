@@ -10,39 +10,6 @@ Simulator::Simulator(double S, double r,double q, double T, double sigma, double
     calc();
 }
 
-const array3d &Simulator::getPrice() const {
-    return price;
-}
-
-double Simulator::getS() const {
-    return S;
-}
-
-
-double Simulator::getQ() const {
-    return q;
-}
-
-double Simulator::getT() const {
-    return T;
-}
-
-double Simulator::getSigma() const {
-    return sigma;
-}
-
-int Simulator::getRep() const {
-    return Rep;
-}
-
-int Simulator::getSim() const {
-    return Sim;
-}
-
-int Simulator::getTradeDays() const {
-    return TradeDays;
-}
-
 double Simulator::getNormal() {
     // random device
     std::random_device rd;
@@ -75,6 +42,39 @@ void Simulator::calc() {
             }
         }
     }
+}
+
+const array3d &Simulator::getPrice() const {
+    return price;
+}
+
+double Simulator::getS() const {
+    return S;
+}
+
+
+double Simulator::getQ() const {
+    return q;
+}
+
+double Simulator::getT() const {
+    return T;
+}
+
+double Simulator::getSigma() const {
+    return sigma;
+}
+
+int Simulator::getRep() const {
+    return Rep;
+}
+
+int Simulator::getSim() const {
+    return Sim;
+}
+
+int Simulator::getTradeDays() const {
+    return TradeDays;
 }
 
 Simulator::~Simulator() {}

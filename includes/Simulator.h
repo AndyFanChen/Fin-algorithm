@@ -24,15 +24,14 @@ private:
 
 
 public:
-    // Constructor
+    // Constructor and destructor
     Simulator(double S, double r, double q, double T, double sigma, double Rep, double Sim, double TradeDays);
-
+    virtual ~Simulator();
 
     // getter
     const array3d &getPrice() const;
 
     double getS() const;
-
 
     double getQ() const;
 
@@ -47,8 +46,6 @@ public:
     double getR() const;
 
     int getTradeDays() const;
-
-    virtual ~Simulator();
 
 };
 

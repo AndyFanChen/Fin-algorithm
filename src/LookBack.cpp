@@ -44,22 +44,23 @@ void LookBack::calc() {
                     }
                 }
 
-                double lastPrice = totalPrice.at(rep).at(sim).at(totalPrice.at(rep).at(sim).size() - 1);
+                double lastPrice = totalPrice.at(rep).at(sim).at(simulator->getTradeDays() - 1);
                 payoff.at(rep).push_back(lastPrice - Smin);
             }
         }
     }
 
     // discount, then put into optionValues
-    for (int rep = 0; rep < payoff.size(); rep++){
-        double sum = 0;
-        for (int sim = 0; sim < payoff.at(rep).size(); sim++){
+    for (int rep = 0; rep < simulator->getRep(); rep++){
+        double sum = 0.0;
+        for (int sim = 0; sim < simulator->getSim(); sim++){
             sum += payoff.at(rep).at(sim);
         }
         double r = simulator->getR();
-        int tradedays = simulator->getTradeDays();
+        double T = simulator->getT();
+        int n = simulator->getSim();
         // discount
-        double value = (sum / tradedays) / exp(-r * tradedays);
+        double value = (sum / n) * exp(-r * T);
 
         // put into optionValues
         optionValues.push_back(value);
@@ -70,8 +71,6 @@ void LookBack::deletePrice() {
     delete simulator;
 }
 
-LookBack::~LookBack() {
-
-}
+LookBack::~LookBack() {}
 
 
