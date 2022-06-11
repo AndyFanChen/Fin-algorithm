@@ -38,7 +38,7 @@ void Simulator::calc() {
     }
 
     // calculate option
-    int count = 0; // 用來計算要用底幾個reductionRV
+    int count = 0; // 用來計算要用第幾個reductionRV
     for (int rep = 0; rep < Rep; rep++) {
         price.push_back(vector<vector<double>>());
 
@@ -46,22 +46,23 @@ void Simulator::calc() {
             price.at(rep).push_back(vector<double>());
 
             for (int tradedays = 0; tradedays < TradeDays; tradedays++){
+                // 取RV
                 double RV = reductionRV.at(count);
                 count++;
+
                 // for time = 0
                 if (tradedays == 0) {
                     double onePrice = exp(log(S) + (r - q - pow(sigma, 2) / 2) * (T / TradeDays)
                                         + RV * sigma * sqrt(T / TradeDays));
                     price.at(rep).at(sim).push_back(onePrice);
-
                 }
+
                 else{
                     double prevPrice = price.at(rep).at(sim).at(tradedays - 1);
 
                     double onePrice = exp(log(prevPrice) + (r - q - pow(sigma, 2) / 2) * (T / TradeDays)
                                         + RV * sigma * sqrt(T / TradeDays));
                     price.at(rep).at(sim).push_back(onePrice);
-
                 }
             }
         }
