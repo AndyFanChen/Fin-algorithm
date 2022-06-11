@@ -22,7 +22,7 @@ void VanillaOption::calc() {
             }
         }
         double avePayoff = sumPayoff / totalPrice[0].size();
-        optionValues.push_back()
+        optionValues.push_back();
     }
 }
 

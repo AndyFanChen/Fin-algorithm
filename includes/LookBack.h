@@ -18,6 +18,8 @@ public:
 public:
     LookBack(Simulator *simulator, char whichOption);
 
+    virtual ~LookBack();
+
 };
 
 
