@@ -14,14 +14,14 @@ class VanillaOption : public Payoff{
 private:
     Simulator* simulator;
     char whichOption;
-    double K;
+    double K, r, T;
+
 public:
-    VanillaOption(Simulator *simulator, char whichOption);
+    VanillaOption(Simulator *simulator, char whichOption, double k);
     virtual ~VanillaOption();
 
 public:
-    void getK();
-
+//    void basic();
     virtual void calc() override;
 
 
