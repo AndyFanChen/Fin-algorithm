@@ -6,7 +6,11 @@
 
 
 LookBack::LookBack(Simulator *simulator, char whichOption)
-:simulator(simulator), whichOption(whichOption){}
+:simulator(simulator), whichOption(whichOption){
+    calc();
+    deletePrice();
+}
+
 
 void LookBack::calc() {
     auto totalPrice = simulator->getPrice();
@@ -63,6 +67,10 @@ void LookBack::calc() {
 }
 
 void LookBack::deletePrice() {
+    delete simulator;
+}
+
+LookBack::~LookBack() {
 
 }
 
