@@ -4,8 +4,24 @@
 
 #include "../includes/VanillaOption.h"
 
-vector<double>& VanillaOption::calc() {
-
-    return <#initializer#>;
+VanillaOption::VanillaOption(Simulator* simulator, char corP) : Payoff(simulator), whichOption(whichOption) {}
+VanillaOption::~VanillaOption() {}
+void VanillaOption::getK() {
+    K = simulator->getK();
 }
+
+vector<double>& VanillaOption::calc() {
+    for(int i = 0; i < totalPrice.size(); ++i){
+
+    }
+    totalPrice
+    return ;
+}
+
+
+
+
+
+
+
 

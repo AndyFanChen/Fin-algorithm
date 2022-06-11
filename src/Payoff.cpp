@@ -4,7 +4,7 @@
 
 #include "../includes/Payoff.h"
 
-Payoff::Payoff(Simulator *simulator) : simulator(simulator){}
+Payoff::Payoff(Simulator* simulator) : simulator(simulator){}
 
 //void Payoff::getValue() {
 //    simulator->getPrice();
@@ -12,9 +12,8 @@ Payoff::Payoff(Simulator *simulator) : simulator(simulator){}
 
 Payoff::~Payoff() {}
 
-const array3d& Payoff::getPrice() {
-
-    return simulator->getPrice();
+void Payoff::getPrice() {
+    totalPrice = simulator->getPrice();
 }
 
 vector<double>& Payoff::getValues() {

@@ -12,8 +12,7 @@ using namespace std;
 class Payoff {
 private:
     Simulator* simulator;
-    array3d totalPrice;
-//public:
+    //public:
 //    Payoff(Simulator *simulator, const array3d &totalPrice, vector<double> &optionValues);
 
 private:
@@ -27,13 +26,14 @@ public:
     virtual ~Payoff();
 //  override時要放private
     virtual vector<double>& calc() = 0;
-    const array3d& getPrice();
+    void getPrice();
     vector<double>& getValues();
     double getMean();
     double getStd();
     vector<double> getRange();
     void deletePrice();
 
+    array3d totalPrice;
 };
 
 
