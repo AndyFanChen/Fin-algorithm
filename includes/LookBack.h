@@ -8,10 +8,15 @@
 
 class LookBack final : public Payoff {
 private:
-    virtual vector<double>& calc() override;
+    Simulator* simulator;
+    char whichOption;
+public:
+    void calc() override;
+
+    void deletePrice() override;
 
 public:
-    LookBack();
+    LookBack(Simulator *simulator, char whichOption);
 
 };
 
