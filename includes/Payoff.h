@@ -11,24 +11,22 @@ using namespace std;
 
 class Payoff {
 private:
-    //public:
-//    Payoff(Simulator *simulator, const array3d &totalPrice, vector<double> &optionValues);
-
-private:
-//    問! &類型變數如何初始化???
+    // store the option values for every simulation
     vector<double> optionValues;
 public:
-//  傳基本參數給payoff class
-//  simulator是Simulator*類的東西(class的地址)
+    // constructor and destructor
     Payoff();
     virtual ~Payoff();
-//  override時要放private
+
+    // override method
     virtual vector<double>& calc() = 0;
+    virtual void deletePrice() = 0;
+
+    // get the simulation statistic summary result
     vector<double>& getValues();
     double getMean();
     double getStd();
     vector<double> getRange();
-    virtual void deletePrice() = 0;
 
 
 };

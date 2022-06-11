@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Fin_algorithm_MC.dir/build.make CMakeFiles/Fin_algorithm_MC.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/LookBack.o: src/LookBack.cpp.o
+.PHONY : src/LookBack.o
+
+# target to build an object file
+src/LookBack.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Fin_algorithm_MC.dir/build.make CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.o
+.PHONY : src/LookBack.cpp.o
+
+src/LookBack.i: src/LookBack.cpp.i
+.PHONY : src/LookBack.i
+
+# target to preprocess a source file
+src/LookBack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Fin_algorithm_MC.dir/build.make CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.i
+.PHONY : src/LookBack.cpp.i
+
+src/LookBack.s: src/LookBack.cpp.s
+.PHONY : src/LookBack.s
+
+# target to generate assembly for a file
+src/LookBack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Fin_algorithm_MC.dir/build.make CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.s
+.PHONY : src/LookBack.cpp.s
+
 src/Payoff.o: src/Payoff.cpp.o
 .PHONY : src/Payoff.o
 
@@ -201,6 +225,30 @@ src/Simulator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Fin_algorithm_MC.dir/build.make CMakeFiles/Fin_algorithm_MC.dir/src/Simulator.cpp.s
 .PHONY : src/Simulator.cpp.s
 
+src/VanillaOption.o: src/VanillaOption.cpp.o
+.PHONY : src/VanillaOption.o
+
+# target to build an object file
+src/VanillaOption.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Fin_algorithm_MC.dir/build.make CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.o
+.PHONY : src/VanillaOption.cpp.o
+
+src/VanillaOption.i: src/VanillaOption.cpp.i
+.PHONY : src/VanillaOption.i
+
+# target to preprocess a source file
+src/VanillaOption.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Fin_algorithm_MC.dir/build.make CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.i
+.PHONY : src/VanillaOption.cpp.i
+
+src/VanillaOption.s: src/VanillaOption.cpp.s
+.PHONY : src/VanillaOption.s
+
+# target to generate assembly for a file
+src/VanillaOption.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Fin_algorithm_MC.dir/build.make CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.s
+.PHONY : src/VanillaOption.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,12 +261,18 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/LookBack.o"
+	@echo "... src/LookBack.i"
+	@echo "... src/LookBack.s"
 	@echo "... src/Payoff.o"
 	@echo "... src/Payoff.i"
 	@echo "... src/Payoff.s"
 	@echo "... src/Simulator.o"
 	@echo "... src/Simulator.i"
 	@echo "... src/Simulator.s"
+	@echo "... src/VanillaOption.o"
+	@echo "... src/VanillaOption.i"
+	@echo "... src/VanillaOption.s"
 .PHONY : help
 
 

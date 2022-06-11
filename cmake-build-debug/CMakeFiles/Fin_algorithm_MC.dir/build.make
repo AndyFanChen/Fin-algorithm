@@ -111,11 +111,41 @@ CMakeFiles/Fin_algorithm_MC.dir/src/Payoff.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Fin_algorithm_MC.dir/src/Payoff.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lindazhong/Fin-algorithm/src/Payoff.cpp -o CMakeFiles/Fin_algorithm_MC.dir/src/Payoff.cpp.s
 
+CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.o: CMakeFiles/Fin_algorithm_MC.dir/flags.make
+CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.o: ../src/VanillaOption.cpp
+CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.o: CMakeFiles/Fin_algorithm_MC.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lindazhong/Fin-algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.o -MF CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.o.d -o CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.o -c /Users/lindazhong/Fin-algorithm/src/VanillaOption.cpp
+
+CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lindazhong/Fin-algorithm/src/VanillaOption.cpp > CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.i
+
+CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lindazhong/Fin-algorithm/src/VanillaOption.cpp -o CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.s
+
+CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.o: CMakeFiles/Fin_algorithm_MC.dir/flags.make
+CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.o: ../src/LookBack.cpp
+CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.o: CMakeFiles/Fin_algorithm_MC.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lindazhong/Fin-algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.o -MF CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.o.d -o CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.o -c /Users/lindazhong/Fin-algorithm/src/LookBack.cpp
+
+CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lindazhong/Fin-algorithm/src/LookBack.cpp > CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.i
+
+CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lindazhong/Fin-algorithm/src/LookBack.cpp -o CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.s
+
 # Object files for target Fin_algorithm_MC
 Fin_algorithm_MC_OBJECTS = \
 "CMakeFiles/Fin_algorithm_MC.dir/main.cpp.o" \
 "CMakeFiles/Fin_algorithm_MC.dir/src/Simulator.cpp.o" \
-"CMakeFiles/Fin_algorithm_MC.dir/src/Payoff.cpp.o"
+"CMakeFiles/Fin_algorithm_MC.dir/src/Payoff.cpp.o" \
+"CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.o" \
+"CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.o"
 
 # External object files for target Fin_algorithm_MC
 Fin_algorithm_MC_EXTERNAL_OBJECTS =
@@ -123,9 +153,11 @@ Fin_algorithm_MC_EXTERNAL_OBJECTS =
 Fin_algorithm_MC: CMakeFiles/Fin_algorithm_MC.dir/main.cpp.o
 Fin_algorithm_MC: CMakeFiles/Fin_algorithm_MC.dir/src/Simulator.cpp.o
 Fin_algorithm_MC: CMakeFiles/Fin_algorithm_MC.dir/src/Payoff.cpp.o
+Fin_algorithm_MC: CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.o
+Fin_algorithm_MC: CMakeFiles/Fin_algorithm_MC.dir/src/LookBack.cpp.o
 Fin_algorithm_MC: CMakeFiles/Fin_algorithm_MC.dir/build.make
 Fin_algorithm_MC: CMakeFiles/Fin_algorithm_MC.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lindazhong/Fin-algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Fin_algorithm_MC"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lindazhong/Fin-algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Fin_algorithm_MC"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Fin_algorithm_MC.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

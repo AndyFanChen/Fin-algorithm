@@ -80,19 +80,31 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/lindazhong/Fin-algorithm/includes/LookBack.h">
+			<Option target="Fin_algorithm_MC"/>
+		</Unit>
 		<Unit filename="/Users/lindazhong/Fin-algorithm/includes/Payoff.h">
 			<Option target="Fin_algorithm_MC"/>
 		</Unit>
 		<Unit filename="/Users/lindazhong/Fin-algorithm/includes/Simulator.h">
 			<Option target="Fin_algorithm_MC"/>
 		</Unit>
+		<Unit filename="/Users/lindazhong/Fin-algorithm/includes/VanillaOption.h">
+			<Option target="Fin_algorithm_MC"/>
+		</Unit>
 		<Unit filename="/Users/lindazhong/Fin-algorithm/main.cpp">
+			<Option target="Fin_algorithm_MC"/>
+		</Unit>
+		<Unit filename="/Users/lindazhong/Fin-algorithm/src/LookBack.cpp">
 			<Option target="Fin_algorithm_MC"/>
 		</Unit>
 		<Unit filename="/Users/lindazhong/Fin-algorithm/src/Payoff.cpp">
 			<Option target="Fin_algorithm_MC"/>
 		</Unit>
 		<Unit filename="/Users/lindazhong/Fin-algorithm/src/Simulator.cpp">
+			<Option target="Fin_algorithm_MC"/>
+		</Unit>
+		<Unit filename="/Users/lindazhong/Fin-algorithm/src/VanillaOption.cpp">
 			<Option target="Fin_algorithm_MC"/>
 		</Unit>
 		<Unit filename="/Users/lindazhong/Fin-algorithm/CMakeLists.txt">
