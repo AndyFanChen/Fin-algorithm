@@ -34,15 +34,15 @@ double Simulator::getSigma() const {
     return sigma;
 }
 
-double Simulator::getRep() const {
+int Simulator::getRep() const {
     return Rep;
 }
 
-double Simulator::getSim() const {
+int Simulator::getSim() const {
     return Sim;
 }
 
-double Simulator::getTradeDays() const {
+int Simulator::getTradeDays() const {
     return TradeDays;
 }
 
@@ -81,3 +81,7 @@ void Simulator::calc() {
 }
 
 Simulator::~Simulator() {}
+
+double Simulator::getR() const {
+    return r;
+}

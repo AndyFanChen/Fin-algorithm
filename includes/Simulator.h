@@ -13,7 +13,8 @@ using array3d = vector<vector<vector<double>>>;
 class Simulator {
 private:
     array3d price;
-    double S, K, q, r, T, sigma, Rep, Sim, TradeDays;
+    double S, K, q, r, T, sigma;
+    int Rep, Sim, TradeDays;
 
     // Normal RV
     double getNormal();
@@ -40,11 +41,13 @@ public:
 
     double getSigma() const;
 
-    double getRep() const;
+    int getRep() const;
 
-    double getSim() const;
+    int getSim() const;
 
-    double getTradeDays() const;
+    double getR() const;
+
+    int getTradeDays() const;
 
     virtual ~Simulator();
 
