@@ -10,13 +10,12 @@
 using namespace std;
 
 class Payoff {
-private:
-    // store the option values for every simulation
-    vector<double> optionValues;
 public:
     // constructor and destructor
     Payoff();
     virtual ~Payoff();
+    // store the option values for every simulation
+    vector<double> optionValues;
 
     // override method
     virtual void calc() = 0;
