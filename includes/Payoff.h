@@ -19,7 +19,7 @@ public:
     virtual ~Payoff();
 
     // override method
-    virtual vector<double>& calc() = 0;
+    virtual void calc() = 0;
     virtual void deletePrice() = 0;
 
     // get the simulation statistic summary result

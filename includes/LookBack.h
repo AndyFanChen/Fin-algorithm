@@ -11,7 +11,7 @@ private:
     virtual vector<double>& calc() override;
 
 public:
-    LookBack(Simulator *simulator);
+    LookBack();
 
 };
 

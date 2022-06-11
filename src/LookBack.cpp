@@ -4,10 +4,10 @@
 
 #include "../includes/LookBack.h"
 
+
+LookBack::LookBack() {}
+
+
 vector<double> &LookBack::calc() {
-
-    return ;
+    return <#initializer#>;
 }
-
-LookBack::LookBack(Simulator *simulator) : Payoff(simulator) {}
-
