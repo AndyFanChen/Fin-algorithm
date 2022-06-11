@@ -4,11 +4,12 @@
 
 #include "../includes/VanillaOption.h"
 
-VanillaOption::VanillaOption(Simulator* simulator, char corP) : simulator(simulator), whichOption(whichOption) {}
+VanillaOption::VanillaOption(Simulator* simulator, char corP, double k) : simulator(simulator), whichOption(whichOption),
+                                                                K(k), r(simulator->getR()), T(simulator->getT()) {}
 VanillaOption::~VanillaOption() {}
-void VanillaOption::getK() {
-    K = simulator->getK();
-}
+//void VanillaOption::getK() {
+//    K = simulator->getK();
+//}
 
 void VanillaOption::calc() {
     const array3d& totalPrice = simulator->getPrice();
@@ -22,9 +23,11 @@ void VanillaOption::calc() {
             }
         }
         double avePayoff = sumPayoff / totalPrice[0].size();
-        optionValues.push_back();
+        double discountedValue = avePayoff * exp( -r * T);
+        optionValues.push_back(discountedValue);
     }
 }
+
 
 
 
