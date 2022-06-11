@@ -46,6 +46,8 @@ public:
 
     double getTradeDays() const;
 
+    virtual ~Simulator();
+
 };
 
 

@@ -6,7 +6,9 @@
 
 
 Simulator::Simulator(double S, double K, double r,double q, double T, double sigma, double Rep, double Sim, double TradeDays)
-: S(S), K(K), q(q), r(r), T(T), sigma(sigma), Rep(Rep), Sim(Sim), TradeDays(TradeDays){}
+: S(S), K(K), q(q), r(r), T(T), sigma(sigma), Rep(Rep), Sim(Sim), TradeDays(TradeDays){
+    calc();
+}
 
 const array3d &Simulator::getPrice() const {
     return price;
@@ -66,10 +68,16 @@ void Simulator::calc() {
         for (int sim = 0; sim < Sim; sim++){
             price.at(rep).push_back(vector<double>());
 
-            for (int tradedays = 0; tradedays < TradeDays; tradedays++){
-                double onePirce = exp(log(S) + (r - q - pow(sigma, 2) / 2) * T + getNormal() * sigma * sqrt(T));
+            for (int tradedays = 0; tradedays < (int)(TradeDays / 2); tradedays++){
+                double RV = getNormal();
+                double onePirce = exp(log(S) + (r - q - pow(sigma, 2) / 2) * T + RV * sigma * sqrt(T));
                 price.at(rep).at(sim).push_back(onePirce);
+                // Variance Reduction
+                double onePirce2 = exp(log(S) + (r - q - pow(sigma, 2) / 2) * T - RV * sigma * sqrt(T));
+                price.at(rep).at(sim).push_back(onePirce2);
             }
         }
     }
 }
+
+Simulator::~Simulator() {}
