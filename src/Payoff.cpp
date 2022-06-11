@@ -12,9 +12,7 @@ Payoff::Payoff(Simulator* simulator) : simulator(simulator){}
 
 Payoff::~Payoff() {}
 
-void Payoff::getPrice() {
-    totalPrice = simulator->getPrice();
-}
+
 
 vector<double>& Payoff::getValues() {
     return optionValues;

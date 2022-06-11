@@ -12,13 +12,13 @@ using namespace std;
 class Payoff {
 private:
     Simulator* simulator;
+
     //public:
 //    Payoff(Simulator *simulator, const array3d &totalPrice, vector<double> &optionValues);
 
 private:
 //    問! &類型變數如何初始化???
     vector<double> optionValues;
-
 public:
 //  傳基本參數給payoff class
 //  simulator是Simulator*類的東西(class的地址)
@@ -33,7 +33,7 @@ public:
     vector<double> getRange();
     void deletePrice();
 
-    array3d totalPrice;
+
 };
 
 
