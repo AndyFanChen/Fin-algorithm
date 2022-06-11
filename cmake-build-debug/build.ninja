@@ -79,6 +79,12 @@ build CMakeFiles/Fin_algorithm_MC.dir/src/Payoff.cpp.obj: CXX_COMPILER__Fin_algo
   OBJECT_DIR = CMakeFiles\Fin_algorithm_MC.dir
   OBJECT_FILE_DIR = CMakeFiles\Fin_algorithm_MC.dir\src
 
+build CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.obj: CXX_COMPILER__Fin_algorithm_MC_Debug C$:/Users/Andy$ Chen/C++/CLion/Fin_algorithm_MC/src/VanillaOption.cpp || cmake_object_order_depends_target_Fin_algorithm_MC
+  DEP_FILE = CMakeFiles\Fin_algorithm_MC.dir\src\VanillaOption.cpp.obj.d
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\Fin_algorithm_MC.dir
+  OBJECT_FILE_DIR = CMakeFiles\Fin_algorithm_MC.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Fin_algorithm_MC
@@ -87,7 +93,7 @@ build CMakeFiles/Fin_algorithm_MC.dir/src/Payoff.cpp.obj: CXX_COMPILER__Fin_algo
 #############################################
 # Link the executable Fin_algorithm_MC.exe
 
-build Fin_algorithm_MC.exe: CXX_EXECUTABLE_LINKER__Fin_algorithm_MC_Debug CMakeFiles/Fin_algorithm_MC.dir/main.cpp.obj CMakeFiles/Fin_algorithm_MC.dir/src/Simulator.cpp.obj CMakeFiles/Fin_algorithm_MC.dir/src/Payoff.cpp.obj
+build Fin_algorithm_MC.exe: CXX_EXECUTABLE_LINKER__Fin_algorithm_MC_Debug CMakeFiles/Fin_algorithm_MC.dir/main.cpp.obj CMakeFiles/Fin_algorithm_MC.dir/src/Simulator.cpp.obj CMakeFiles/Fin_algorithm_MC.dir/src/Payoff.cpp.obj CMakeFiles/Fin_algorithm_MC.dir/src/VanillaOption.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Fin_algorithm_MC.dir
