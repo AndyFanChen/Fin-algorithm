@@ -12,8 +12,8 @@ using namespace std;
 
 class VanillaOption : public Payoff{
 private:
+    Simulator* simulator;
     char whichOption;
-    array3d
     double K;
 public:
     VanillaOption(Simulator *simulator, char whichOption);
@@ -22,7 +22,7 @@ public:
 public:
     void getK();
 
-    virtual vector<double>& calc() override;
+    virtual void calc() override;
 
 
 
