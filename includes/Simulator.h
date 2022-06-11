@@ -13,6 +13,7 @@ using array3d = vector<vector<vector<double>>>;
 class Simulator {
 private:
     array3d price;
+    vector<double> reductionRV;
     double S, q, r, T, sigma;
     int Rep, Sim, TradeDays;
 
@@ -25,7 +26,7 @@ private:
 
 public:
     // Constructor and destructor
-    Simulator(double S, double r, double q, double T, double sigma, double Rep, double Sim, double TradeDays);
+    Simulator(double S, double r, double q, double T, double sigma, int Rep, int Sim, int TradeDays);
     virtual ~Simulator();
 
     // getter

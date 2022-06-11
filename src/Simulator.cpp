@@ -5,7 +5,7 @@
 #include "../includes/Simulator.h"
 
 
-Simulator::Simulator(double S, double r,double q, double T, double sigma, double Rep, double Sim, double TradeDays)
+Simulator::Simulator(double S, double r,double q, double T, double sigma, int Rep, int Sim, int TradeDays)
 : S(S), q(q), r(r), T(T), sigma(sigma), Rep(Rep), Sim(Sim), TradeDays(TradeDays){
     calc();
 }
@@ -26,35 +26,42 @@ double Simulator::getNormal() {
 }
 
 void Simulator::calc() {
+
+    // Variance Reduction RV
+    for (int i = 0; i < Rep * Sim * TradeDays; i++) {
+        if (i < Rep * Sim * TradeDays / 2) {
+            reductionRV.push_back(getNormal());
+        }
+        else{
+            reductionRV.push_back(reductionRV.at(i - Rep * Sim * TradeDays / 2));
+        }
+    }
+
+    // calculate option
+    int count = 0; // 用來計算要用底幾個reductionRV
     for (int rep = 0; rep < Rep; rep++) {
         price.push_back(vector<vector<double>>());
 
         for (int sim = 0; sim < Sim; sim++){
             price.at(rep).push_back(vector<double>());
 
-            for (int tradedays = 0; tradedays < (int)(TradeDays / 2); tradedays++){
-                double RV = getNormal();
+            for (int tradedays = 0; tradedays < TradeDays; tradedays++){
+                double RV = reductionRV.at(count);
+                count++;
+                // for time = 0
                 if (tradedays == 0) {
-                    double onePirce = exp(log(S) + (r - q - pow(sigma, 2) / 2) * (T / TradeDays) +
-                                          RV * sigma * sqrt(T / TradeDays));
-                    price.at(rep).at(sim).push_back(onePirce);
+                    double onePrice = exp(log(S) + (r - q - pow(sigma, 2) / 2) * (T / TradeDays)
+                                        + RV * sigma * sqrt(T / TradeDays));
+                    price.at(rep).at(sim).push_back(onePrice);
 
-                    // Variance Reduction
-                    double onePirce2 = exp(log(S) + (r - q - pow(sigma, 2) / 2) * (T / TradeDays) -
-                                           RV * sigma * sqrt(T / TradeDays));
-                    price.at(rep).at(sim).push_back(onePirce2);
                 }
                 else{
-                    double prePrice = price.at(rep).at(sim).at(tradedays - 1);
+                    double prevPrice = price.at(rep).at(sim).at(tradedays - 1);
 
-                    double onePirce = exp(log(prePrice) + (r - q - pow(sigma, 2) / 2) * (T / TradeDays)
+                    double onePrice = exp(log(prevPrice) + (r - q - pow(sigma, 2) / 2) * (T / TradeDays)
                                         + RV * sigma * sqrt(T / TradeDays));
-                    price.at(rep).at(sim).push_back(onePirce);
+                    price.at(rep).at(sim).push_back(onePrice);
 
-                    // Variance Reduction
-                    double onePirce2 = exp(log(prePrice) + (r - q - pow(sigma, 2) / 2) * (T / TradeDays)
-                                        - RV * sigma * sqrt(T / TradeDays));
-                    price.at(rep).at(sim).push_back(onePirce2);
                 }
             }
         }
