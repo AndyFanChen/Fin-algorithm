@@ -83,6 +83,9 @@
 		<Unit filename="/Users/lindazhong/Fin-algorithm/includes/CRRBinomialTree.h">
 			<Option target="Fin_algorithm_MC"/>
 		</Unit>
+		<Unit filename="/Users/lindazhong/Fin-algorithm/includes/ImpliedVolatility.h">
+			<Option target="Fin_algorithm_MC"/>
+		</Unit>
 		<Unit filename="/Users/lindazhong/Fin-algorithm/includes/LookBack.h">
 			<Option target="Fin_algorithm_MC"/>
 		</Unit>
@@ -99,6 +102,9 @@
 			<Option target="Fin_algorithm_MC"/>
 		</Unit>
 		<Unit filename="/Users/lindazhong/Fin-algorithm/src/CRRBinomialTree.cpp">
+			<Option target="Fin_algorithm_MC"/>
+		</Unit>
+		<Unit filename="/Users/lindazhong/Fin-algorithm/src/ImpliedVolatility.cpp">
 			<Option target="Fin_algorithm_MC"/>
 		</Unit>
 		<Unit filename="/Users/lindazhong/Fin-algorithm/src/LookBack.cpp">

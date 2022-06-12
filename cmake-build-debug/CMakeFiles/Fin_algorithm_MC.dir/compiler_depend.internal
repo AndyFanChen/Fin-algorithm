@@ -374,6 +374,7 @@ CMakeFiles/Fin_algorithm_MC.dir/main.cpp.o
  /Users/lindazhong/Fin-algorithm/includes/LookBack.h
  /Users/lindazhong/Fin-algorithm/includes/Payoff.h
  /Users/lindazhong/Fin-algorithm/includes/CRRBinomialTree.h
+ /Users/lindazhong/Fin-algorithm/includes/ImpliedVolatility.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iostream
  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ios
  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__locale
